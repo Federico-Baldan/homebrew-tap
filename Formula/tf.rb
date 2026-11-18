@@ -5,21 +5,21 @@
 class Tf < Formula
   desc "A prettier, interactive TUI for terraform plan/apply/destroy"
   homepage "https://github.com/Federico-Baldan/tf"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Federico-Baldan/tf/releases/download/v0.2.0/tf_0.2.0_darwin_amd64.tar.gz"
-      sha256 "dbebf899cfb2c48e968c9a87c8d0682d4c98ccc07acb5e5f403b88c5f3e98920"
+      url "https://github.com/Federico-Baldan/tf/releases/download/v0.2.1/tf_0.2.1_darwin_amd64.tar.gz"
+      sha256 "95a772e28d877b5f569a353797906d09bb461451352b8ff3d3065ec3408b9ffb"
 
       define_method(:install) do
         bin.install "tf"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Federico-Baldan/tf/releases/download/v0.2.0/tf_0.2.0_darwin_arm64.tar.gz"
-      sha256 "c7c06d710c0b869ff6e0f0ae54905af3a1225c15b81d7ebc09a3c5e5ee8bb156"
+      url "https://github.com/Federico-Baldan/tf/releases/download/v0.2.1/tf_0.2.1_darwin_arm64.tar.gz"
+      sha256 "5c01f730d2771af68ceeab93d46b9b4bf98c732b464350666c38284849dbc434"
 
       define_method(:install) do
         bin.install "tf"
@@ -29,15 +29,15 @@ class Tf < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Federico-Baldan/tf/releases/download/v0.2.0/tf_0.2.0_linux_amd64.tar.gz"
-      sha256 "5874c72fb6912423f8197ea3c0a82c51296ca9ec1684486efc013132cb995762"
+      url "https://github.com/Federico-Baldan/tf/releases/download/v0.2.1/tf_0.2.1_linux_amd64.tar.gz"
+      sha256 "488ee76bcdd5b16bcc52bf9dfc2240d68f295c4a738dc8b23f5090228ee3a0cf"
       define_method(:install) do
         bin.install "tf"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Federico-Baldan/tf/releases/download/v0.2.0/tf_0.2.0_linux_arm64.tar.gz"
-      sha256 "3511e4ef9d650d4cfce287bf034f358112ffe2b5b86de3587bf4c2df6a980c86"
+      url "https://github.com/Federico-Baldan/tf/releases/download/v0.2.1/tf_0.2.1_linux_arm64.tar.gz"
+      sha256 "7f6d6dd5dfee9acd412c7e7982b8751e65ba4047b1921e24f992e5ee3f13b710"
       define_method(:install) do
         bin.install "tf"
       end
